@@ -10,7 +10,7 @@ public class App {
 
         Constructor<Settings> constructor = Settings.class.getDeclaredConstructor();
         constructor.setAccessible(true);
-        constructor.newInstance()
+        Settings settings1 = constructor.newInstance();
 
         System.out.println(settings == settings1);
     }
