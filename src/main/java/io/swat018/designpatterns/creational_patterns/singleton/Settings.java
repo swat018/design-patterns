@@ -2,19 +2,14 @@ package io.swat018.designpatterns.creational_patterns.singleton;
 
 public class Settings {
 
-    private static volatile Settings instance;
-
     private Settings() {}
 
+    private static class SettingsHolder {
+        private static final Settings INSTANCE = new Settings();
+    }
+
     public static Settings getInstance() {
-        if (instance == null) {
-            synchronized (Settings.class) {
-                if (instance == null) {
-                    instance = new Settings();
-                }
-            }
-        }
-        return instance;
+        return SettingsHolder.INSTANCE;
     }
 
 }
