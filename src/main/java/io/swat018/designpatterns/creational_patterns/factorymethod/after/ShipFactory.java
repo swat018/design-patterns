@@ -1,7 +1,5 @@
 package io.swat018.designpatterns.creational_patterns.factorymethod.after;
 
-import org.springframework.security.core.parameters.P;
-
 public interface ShipFactory {
 
     default Ship orderShip(String name, String email) {
