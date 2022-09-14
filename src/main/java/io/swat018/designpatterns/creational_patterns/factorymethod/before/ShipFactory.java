@@ -17,7 +17,7 @@ public class ShipFactory {
         ship.setName(name);
 
         // Customizing for specific name
-        if (name.equalsIgnoreCase("whiteship")) {
+        if (name.equalsIgnoreCase("`whiteship`")) {
             ship.setLogo("\uD83D\uDEE5");
         } else if (name.equalsIgnoreCase("blackship")) {
             ship.setLogo("⚓");
@@ -25,7 +25,7 @@ public class ShipFactory {
 
         // coloring
         if (name.equalsIgnoreCase("whiteship")) {
-            ship.setColor("whiteship");
+            ship.setColor("white");
         } else if (name.equalsIgnoreCase("blackship")) {
             ship.setColor("black");
         }
