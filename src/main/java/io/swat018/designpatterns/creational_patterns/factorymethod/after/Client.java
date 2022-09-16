@@ -4,11 +4,11 @@ public class Client {
 
     public static void main(String[] args) {
         Client client = new Client();
+        client.print(new WhiteShipFactory(), "whiteship", "swat018@gmail.com");
+        client.print(new BlackShipFactory(), "blackship", "email@email.com");
+    }
 
-        Ship whiteShip = new WhiteShipFactory().orderShip("WhiteShip", "swat018@gmail.com");
-        System.out.println(whiteShip);
-
-        Ship blackShip = new BlackShipFactory().orderShip("BlackShip", "mail@gmail.com");
-        System.out.println(blackShip);
+    private void print(ShipFactory shipFactory, String name, String email) {
+        System.out.println(shipFactory.orderShip(name, email));
     }
 }
